@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Mel Lab</title>
+  <meta content="Mel Lab" name="description">
+  <meta content="Mel Lab" property="og:title">
+  <meta content="Mel Lab" property="og:description">
+  <meta content="Mel Lab" property="twitter:title">
+  <meta content="Mel Lab" property="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="./assets/styles.css" rel="stylesheet" type="text/css">
+  <link href="./assets/burger.css" rel="stylesheet" type="text/css">
+
+   <link href="./assets/css2" rel="stylesheet">
+
+<script src="chrome-extension://njgehaondchbmjmajphnhlojfnbfokng/js/contentScripts/dom.js"></script></head>
+
+<body>
+  <div class="overlay">
+    <ul class="list">
+      <li class="items"><a href="https://mellab.ai/#about-us">Mel Lab Mission</a></li>
+<!--       <li class="items"><a href="https://mellab.ai/#jobs">Jobs</a></li>
+ -->      <li class="items"><a href="https://mellab.ai/#contact-us">Contact us</a></li>
+    </ul>
+  </div>
+  
+  <div class="header">
+    <div class="menu-icon">
+      <span class="bar"></span>
+    </div>
+  </div>
+
+
+  <div class="container" id="header">
+    <div class="item-2">
+      <h1 class="logo"><a href="https://mellab.ai/"><img src="./assets/ml_logo.png" alt="Mel Lab"></a></h1>
+    </div>
+    <div class="item-10">
+      <menu>
+        <a href="https://mellab.ai/#about-us">Mel Lab Mission</a>
+        <!-- <a href="https://mellab.ai/#jobs">Jobs</a> -->
+        <a href="https://mellab.ai/#contact-us" class="button">Contact us</a>
+      </menu>
+    </div>
+  </div>
+  <div class="container" id="wave">
+    <img src="./assets/Wave.svg" alt="">
+
+  </div>
+  <div class="container" id="intro">
+    <div class="item-12 container-vertical">
+      <div class="item-8">
+        <h2>The world’s best trustworthy speech processing solution</h2>
+      </div>
+      <div class="item-8">
+        <p>We believe that every client should have access to cutting-edge speech processing technology that is not only accurate but also trustworthy and explainable, so that users can trust the results and make informed decisions.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="about-us">
+    <div class="item-12 container-vertical">
+      <div class="item-8">
+        <h2>Mel Laboratory</h2>
+      </div>
+      <div class="item-8">   
+        <p>At Mel Lab, we are revolutionizing the field that lies at the intersection of traditional signal processing and deep learning. Our unique approach leverages our extensive expertise in combination with the latest machine learning advancements to produce cutting-edge solutions for speech synthesis, voice conversion, audio deepfake detection, and explainable machine learning. Our focus on efficiency and innovation allows us to deliver high-quality, reliable solutions that exceed industry standards.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="jobs">
+    <div class="item-12">
+      <h2>Working at Mel Lab</h2>
+      <p>Mel Lab is a globally distributed company headquartered in Singapore. We operate as a fully remote team and are actively seeking full-time employees from any of the 150 countries we operate in, with full compliance and benefits. We offer a range of competitive perks and early-stage equity to our employees. If you're looking to join a dynamic and innovative team, we invite you to come and be a part of Mel Lab's exciting journey!</p>
+    </div>
+  </div>
+
+  <div class="container" id="contact-us">
+    <form class="width-narrow" method="POST" name="contact"><input type="hidden" name="form-name" value="contact">
+      <div class="item-12">
+        <div class="item-6">
+          <h2>Contact us</h2>
+        </div>
+        <div class="item-6 container-horizontal">
+          <div class="item-3">
+            <label for="yourname">Your name</label><input type="text" name="yourname" id="yourname" required="true">
+          </div>
+          <div class="item-3 last-item">
+            <label for="youremail">Your email address</label><input type="email" name="youremail" id="youremail" required="true">
+          </div>
+        </div>
+        <div class="item-6">
+          <label for="yourmessage">Your message</label><textarea name="yourmessage" id="yourmessage" rows="4" required="true" cols="50"></textarea>
+        </div>
+        <div class="item-2">
+          <button type="submit">Send</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="container" id="footer">
+    <div class="item-12">
+      <div class="item-1 logo"><img src="./assets/ml_logo.png" alt="Mel Lab"></div>
+      <div class="item-1 copyright">©2023</div>
+    </div>
+  </div>
+  <script src="./assets/jquery.min.js"></script>
+  <script src="./assets/burger.js"></script>
+
+  <script src="./assets/TweenMax.min.js"></script>
+  <script src="./assets/jquery-3.1.1.min.js"></script>
+  <script src="./assets/wavify.js"></script>
+  <script src="./assets/jquery.wavify.js"></script>
+  
+  <script>
+    var height = 140;
+    var heightAddition = 0;
+    var amplitude = 120;
+    var amplitudeAddition = 4;
+    var speed = 0.24;
+    var speedAddition = 0;
+    let width = window.innerWidth;
+    if (width > 940) {
+      var bones = 10;
+    } else {
+      var bones = 6;
+    }
+  
+    $('#feel-the-wave').wavify({
+      height: height + 1 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 1  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 1 * speedAddition
+    });
+    $('#feel-the-wave-two').wavify({
+      height: height + 2 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 2  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 2 * speedAddition
+    });
+    $('#feel-the-wave-three').wavify({
+      height: height + 3 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 3  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 3 * speedAddition
+    });
+    $('#feel-the-wave-four').wavify({
+      height: height + 4 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 4  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 4 * speedAddition
+    });
+    $('#feel-the-wave-five').wavify({
+      height: height + 5 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 5  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 5 * speedAddition
+    });
+    $('#feel-the-wave-six').wavify({
+      height: height + 6 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 6  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 6 * speedAddition
+    });
+    $('#feel-the-wave-seven').wavify({
+      height: height + 7 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 7  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 7 * speedAddition
+    });
+    $('#feel-the-wave-eight').wavify({
+      height: height + 8 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 8  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 8 * speedAddition
+    });
+    $('#feel-the-wave-nine').wavify({
+      height: height + 9 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 9  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 9 * speedAddition
+    });
+    $('#feel-the-wave-ten').wavify({
+      height: height + 10 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 10  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 10 * speedAddition
+    });
+    $('#feel-the-wave-11').wavify({
+      height: height + 11 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 11  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 11 * speedAddition
+    });
+    $('#feel-the-wave-12').wavify({
+      height: height + 12 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 12  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 12 * speedAddition
+    });
+    $('#feel-the-wave-13').wavify({
+      height: height + 13 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 13  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 13 * speedAddition
+    });
+    $('#feel-the-wave-14').wavify({
+      height: height + 14 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 14  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 14 * speedAddition
+    });
+    $('#feel-the-wave-15').wavify({
+      height: height + 15 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 15  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 15 * speedAddition
+    });
+    $('#feel-the-wave-16').wavify({
+      height: height + 16 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 16  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 16 * speedAddition
+    });
+    $('#feel-the-wave-17').wavify({
+      height: height + 17 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 17  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 17 * speedAddition
+    });
+    $('#feel-the-wave-18').wavify({
+      height: height + 18 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 18  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 18 * speedAddition
+    });
+    $('#feel-the-wave-19').wavify({
+      height: height + 19 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 19  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 19 * speedAddition
+    });
+    $('#feel-the-wave-20').wavify({
+      height: height + 20 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 20  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 20 * speedAddition
+    });
+    $('#feel-the-wave-21').wavify({
+      height: height + 21 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 21  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 21 * speedAddition
+    });
+    $('#feel-the-wave-22').wavify({
+      height: height + 22 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 22  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 22 * speedAddition
+    });
+    $('#feel-the-wave-23').wavify({
+      height: height + 23 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 23  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 23 * speedAddition
+    });
+    $('#feel-the-wave-24').wavify({
+      height: height + 24 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 24  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 24 * speedAddition
+    });
+    $('#feel-the-wave-25').wavify({
+      height: height + 25 * heightAddition,
+      bones: bones,
+      amplitude: amplitude + 25  * amplitudeAddition,
+      color: 'rgba(150, 97, 255, .8)',
+      speed: speed + 25 * speedAddition
+    });
+  
+  </script>
+
+</body></html>
